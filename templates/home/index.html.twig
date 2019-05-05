@@ -11,5 +11,17 @@
 <div class="example-wrapper">
     <h1>Hello {{ title }}! ✅</h1>
 
+
+    <ul>
+        {% for item in list %}
+            <li><strong>{{ item.id }}</strong>) - {{ item.name }}</li>
+        {% endfor %}
+    </ul>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">OK</button>
+    {{ form_end(form) }}
+
 </div>
 {% endblock %}
